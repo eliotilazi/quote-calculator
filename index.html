@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quote Calculator | Eliot Ilazi</title>
+  <meta name="description" content="Quote calculator for custom furniture (kitchen, wardrobe, bedroom, built-in, terrace) in French, Albanian and English. Portfolio project by Eliot Ilazi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <span class="logo">Atelier <em>Boréal</em></span>
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="fr">FR</button><button data-lang="sq">SQ</button><button data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker" data-t="kicker"></p>
+      <h1 data-t="title"></h1>
+      <p class="lead" data-t="intro"></p>
+    </section>
+
+    <div class="layout">
+      <form id="form" class="panel" autocomplete="off">
+        <h2 data-t="step1"></h2>
+        <div class="types" id="types" role="radiogroup"></div>
+
+        <h2 data-t="step2"></h2>
+        <div id="fields" class="fields"></div>
+
+        <h2 data-t="step3"></h2>
+        <div class="tiers" id="tiers" role="radiogroup"></div>
+        <div class="fields">
+          <label class="check"><input type="checkbox" id="installation" checked> <span data-t="installation"></span></label>
+          <label><span data-t="delivery"></span>
+            <select id="delivery"></select>
+          </label>
+        </div>
+      </form>
+
+      <aside class="panel result" aria-live="polite">
+        <p class="quote-no"><span data-t="quoteNo"></span> <span id="quoteNo"></span> · <span id="date"></span></p>
+        <p class="label" data-t="estimate"></p>
+        <p class="big" id="total"></p>
+        <p class="range" id="range"></p>
+
+        <h3 data-t="detail"></h3>
+        <table class="lines"><tbody id="lines"></tbody></table>
+
+        <h3 data-t="compare"></h3>
+        <div class="compare" id="compare"></div>
+
+        <div class="actions">
+          <button type="button" id="copy" data-t="copy"></button>
+          <button type="button" id="print" class="ghost" data-t="print"></button>
+        </div>
+        <p class="note" data-t="validity"></p>
+      </aside>
+    </div>
+
+    <p class="tech">HTML, CSS, JavaScript (ES modules) · no framework · pricing engine tested with Node · <a href="https://github.com/eliotilazi/quote-calculator">source code</a></p>
+  </main>
+
+  <footer class="wrap foot"><span data-t="footer"></span> Built by <a href="https://eliotilazi.github.io">Eliot Ilazi</a>.</footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
