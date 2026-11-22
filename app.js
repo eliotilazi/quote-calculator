@@ -37,8 +37,7 @@ function pickLang() {
     const saved = localStorage.getItem('qc-lang')
     if (saved && TEXT[saved]) return saved
   } catch {}
-  const nav = (navigator.language || 'fr').slice(0, 2)
-  return TEXT[nav] ? nav : 'fr'
+  return 'en' // English by default; French and Albanian stay one click away
 }
 
 const t = () => TEXT[state.lang]
